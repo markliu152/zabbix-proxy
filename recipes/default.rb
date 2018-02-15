@@ -17,6 +17,13 @@ template '/etc/zabbix/zabbix_proxy.conf' do
 end
 
 include_recipe 'zabbix-proxy::mariadb'
+
+bash 'sh_openssl_rand' do
+  code <<-EOF
+    sh -c "openssl rand -hex 32 > /etc/zabbix/zabbix_proxy.psk"
+  EOF
+end
+
 include_recipe 'zabbix1::selinux'
 
 service 'zabbix-proxy' do

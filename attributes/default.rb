@@ -1,0 +1,13 @@
+default['zabbix']['proxy']['server'] = '192.168.0.187'
+default['zabbix']['schema']['path'] = '/usr/share/doc/zabbix-proxy-mysql*'
+default['zabbix']['proxy']['hostname'] = 'zabbix_proxy'
+default['zabbix']['mysql']['root_password'] = 'mysql'
+default['zabbix']['mysql']['db_name'] = 'zabbix_proxy'
+default['zabbix']['mysql']['user_name'] = 'zabbix'
+default['zabbix']['mysql']['user_password'] = '123456'
+default['zabbix']['proxy']['TLSConnect'] = 'psk'
+default['zabbix']['proxy']['TLSAccept'] = 'psk'
+default['zabbix']['proxy']['TLSPSKIdentity'] = 'PSK 001'
+default['zabbix']['proxy']['TLSPSKFile'] = '/etc/zabbix/zabbix_proxy.psk'
+default['port'] = '10051/tcp'
+
